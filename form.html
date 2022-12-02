@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM VALIDATION</title>
+        <style>
+            body{
+                font-family: sans-serif;
+                margin-left: 800px;
+                margin-right: 800px;
+                text-align: center;
+                border: black;
+                border-width: 9px;
+                border-style: dashed;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                background-color: aqua;
+            }
+            #name{
+                text-align: center;
+                font-size: 30px;
+            }
+            #choice{
+                font-size: 20px;
+            }
+            #button{
+                border: none;
+                cursor: pointer;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: blueviolet;
+                color: aliceblue;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="form" method="post">
+            <h5 id="name">SIMPLE FORM</h5><hr>
+            <p id="choice">Department</p>
+            <input type="radio" name="choice1">B.Sc CS
+            <input type="radio" name="choice1">B.Sc IT
+            <input type="radio" name="choice1">BCA<hr>
+            <p id="choice">Graduated?</p>
+            <input type="radio" name="choice2">Yes
+            <input type="radio" name="choice2">No<hr>
+            <p id="choice">Willing to attend workshop?</p>
+            <input type="radio" name="choice3">Yes
+            <input type="radio" name="choice3">No<hr><br><br>
+            <input id="button" type="Submit" name="Submit" value="Submit">
+        </form>
+    </body>
+    <script>
+        var form = document.getElementById('form')
+        var error = []
+        form.addEventListener('submit',function(e)
+        {
+            e.preventDefault()
+            window.location.href = "welcome.html"
+        })
+    </script>
+</html>
